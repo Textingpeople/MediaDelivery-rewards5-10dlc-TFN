@@ -12,40 +12,32 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "RewardRise — Team Recognition Platform";
+const description =
+  "RewardRise helps teams celebrate wins big and small with continuous peer and manager recognition.";
+
 export const metadata: Metadata = {
-  title: "RewardRise — Employee Engagement Platform",
-  description: "Recognize effort, reward performance, and build a culture people love. RewardRise is the employee engagement platform that drives real recognition, reduces turnover, and keeps your team motivated.",
-  keywords: "employee recognition, team rewards, workplace culture, continuous recognition, HR engagement",
+  metadataBase: new URL("https://getrewardrise.com"),
+  title,
+  description,
+  keywords:
+    "employee recognition, peer recognition, team celebrations, workplace culture, continuous recognition",
   openGraph: {
-    title: "RewardRise — Employee Engagement Platform",
-    description: "Recognize effort, reward performance, and build a culture people love. The employee engagement platform that drives real recognition and reduces turnover.",
-    url: "https://tryrewardrise.com",
+    title,
+    description,
+    url: "https://getrewardrise.com",
     siteName: "RewardRise",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "RewardRise — Employee Engagement Platform",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "RewardRise — Employee Engagement Platform",
-    description: "Recognize effort, reward performance, and build a culture people love.",
-    images: ["/logo.png"],
+    card: "summary",
+    title,
+    description,
   },
   robots: {
     index: true,
     follow: true,
-  },
-  icons: {
-    icon: [],
-    shortcut: [],
-    apple: [],
   },
 };
 
@@ -56,20 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLGG52GZ09"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YLGG52GZ09');
-            `,
-          }}
-        />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
